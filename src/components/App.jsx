@@ -6,8 +6,12 @@ import upcomingTransactions from 'transactions.json';
 export const App = () => {
   return (
     <div>
-      <EventBoard event={upcomingEvent} data={upcomingData} friends={upcomingFriends} transactions={upcomingTransactions} />
+      <EventBoard
+        event={upcomingEvent}
+        data={upcomingData}
+        friends={upcomingFriends}
+        transactions={upcomingTransactions}
+      />
     </div>
   );
-
 };

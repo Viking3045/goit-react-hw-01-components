@@ -1,11 +1,11 @@
-.statList{
-display: flex;
- justify-content: center;
+.statList {
+  display: flex;
+  justify-content: center;
 }
-.statList li{
-    width: 70px;
-list-style: none;
-color: white;
-background-color: tomato;
-padding: 10px;
+.statList li {
+  width: 70px;
+  list-style: none;
+  color: white;
+  background-color: tomato;
+  padding: 10px;
 }
