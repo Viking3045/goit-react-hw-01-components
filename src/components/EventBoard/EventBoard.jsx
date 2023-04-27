@@ -2,7 +2,7 @@ import css from './EventBoard.module.css';
 import PropTypes from 'prop-types';
 import { Profile } from 'components/Profile/Profile';
 import { Statistics } from 'components/Statistics/Statistics';
-import { FriedList } from 'components/FriendList/FriendList';
+import { FriendList } from 'components/FriendList/FriendList';
 export const EventBoard = ({ event, data, friends }) => {
 
   // console.log(event)
@@ -28,7 +28,7 @@ export const EventBoard = ({ event, data, friends }) => {
       {data.map(({ id, label, percentage }) => (
         <Statistics key={id} id={id} label={label} percentage={percentage} />
       ))}
-      <FriedList friends={friends} />
+      <FriendList friends={friends} />
     </div>
   );
 };
@@ -50,5 +50,6 @@ export const EventBoard = ({ event, data, friends }) => {
 EventBoard.propTypes = {
   event: PropTypes.object.isRequired,
   data: PropTypes.array.isRequired,
+  friends: PropTypes.array.isRequired,
 };
 
