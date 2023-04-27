@@ -2,9 +2,12 @@ import css from './EventBoard.module.css';
 import PropTypes from 'prop-types';
 import { Profile } from 'components/Profile/Profile';
 import { Statistics } from 'components/Statistics/Statistics';
-export const EventBoard = ({ event, data }) => {
+import { FriedList } from 'components/FriendList/FriendList';
+export const EventBoard = ({ event, data, friends }) => {
+
   // console.log(event)
   // console.log(data)
+  // console.log(friends)
   // const { id, label, percentage } = data;
   const { username, tag, location, avatar, stats } = event;
   // console.log(username)
@@ -25,6 +28,7 @@ export const EventBoard = ({ event, data }) => {
       {data.map(({ id, label, percentage }) => (
         <Statistics key={id} id={id} label={label} percentage={percentage} />
       ))}
+      <FriedList friends={friends} />
     </div>
   );
 };
