@@ -1,7 +1,8 @@
 import css from './EventBoard.module.css';
 import PropTypes from 'prop-types';
 import { Profile } from 'components/Profile/Profile';
-import { Statistics } from 'components/Statistics/Statistics';
+import { StatList } from 'components/StatList/StatList';
+// import { Statistics } from 'components/Statistics/Statistics';
 import { FriendList } from 'components/FriendList/FriendList';
 import { TransactionHistory } from 'components/TransactionHistory/TransactionHistory';
 export const EventBoard = ({ event, data, friends, transactions }) => {
@@ -25,10 +26,7 @@ export const EventBoard = ({ event, data, friends, transactions }) => {
         views={stats.views}
         likes={stats.likes}
       />
-      <h2 className={css.title}>Upload stats</h2>
-      {data.map(({ id, label, percentage }) => (
-        <Statistics key={id} id={id} label={label} percentage={percentage} />
-      ))}
+      <StatList data={data} />
       <FriendList friends={friends} />
            {transactions.map(({id, type, amount, currency}) => (
         <TransactionHistory key={id} id={id} type={type} amount={amount} currency={currency} />
