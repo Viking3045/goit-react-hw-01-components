@@ -10,7 +10,7 @@ export const Profile = ({
   likes,
 }) => {
   return (
-    <div className={css.Profile}>
+    <div className={css.profile}>
       <div className={css.description}>
         <img
           src={avatar}
