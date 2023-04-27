@@ -1,10 +1,14 @@
 import css from './EventBoard.module.css';
 import PropTypes from 'prop-types';
 import { Profile } from 'components/Profile/Profile';
-export const EventBoard = ({ event }) => {
+import { Statistics } from 'components/Statistics/Statistics';
+export const EventBoard = ({ event, data }) => {
   // console.log(event)
+  // console.log(data)
+  // const { id, label, percentage } = data;
   const { username, tag, location, avatar, stats } = event;
   // console.log(username)
+  // console.log(id);
   return (
     <div className={css.person}>
       <Profile
@@ -17,6 +21,10 @@ export const EventBoard = ({ event }) => {
         views={stats.views}
         likes={stats.likes}
       />
+      <h2 className={css.title}>Upload stats</h2>
+      {data.map(({ id, label, percentage }) => (
+        <Statistics key={id} id={id} label={label} percentage={percentage} />
+      ))}
     </div>
   );
 };
@@ -36,5 +44,7 @@ export const EventBoard = ({ event }) => {
 //   ),
 // };
 EventBoard.propTypes = {
-  event: PropTypes.object.isRequired
+  event: PropTypes.object.isRequired,
+  data: PropTypes.array.isRequired,
 };
+
