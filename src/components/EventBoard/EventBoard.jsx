@@ -28,9 +28,7 @@ export const EventBoard = ({ event, data, friends, transactions }) => {
       />
       <StatList data={data} />
       <FriendList friends={friends} />
-           {transactions.map(({id, type, amount, currency}) => (
-        <TransactionHistory key={id} id={id} type={type} amount={amount} currency={currency} />
-      ))}
+      <TransactionHistory transactions={transactions}/>
     </div>
   );
 };
