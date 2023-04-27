@@ -11,3 +11,9 @@ export const TransactionTable = ({id, type, amount, currency}) => {
   </tbody>
     )
 } 
+TransactionTable.propTypes = {
+    id:PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    amount: PropTypes.string.isRequired,
+    currency: PropTypes.string.isRequired,
+};
