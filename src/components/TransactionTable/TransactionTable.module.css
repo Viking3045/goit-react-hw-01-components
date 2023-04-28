@@ -5,9 +5,7 @@ table {
   width: 70%;
   margin: 5% auto 0;
   -moz-border-radius: 5px;
-  /* FF1+ */
   -webkit-border-radius: 5px;
-  /* Saf3-4 */
   border-radius: 5px;
   -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
