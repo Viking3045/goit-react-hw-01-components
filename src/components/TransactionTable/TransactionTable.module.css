@@ -1,3 +1,6 @@
+.transactionTable{
+  border-radius: 1px;
+}
 table {
   overflow: hidden;
   border: 1px solid #d3d3d3;
