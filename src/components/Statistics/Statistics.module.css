@@ -2,6 +2,29 @@
   display: flex;
   justify-content: center;
 }
+
+.statList li {
+  width: 70px;
+  list-style: none;
+  color: white;
+  background-color: tomato;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+.statList li:nth-child(2n) {
+  background-color: blue;
+}
+.title {
+  margin-left: auto;
+  margin-right: auto;
+  width: 268px;
+  background-color: white;
+}
+.statList {
+  display: flex;
+  justify-content: center;
+}
+
 .statList li {
   width: 70px;
   list-style: none;
